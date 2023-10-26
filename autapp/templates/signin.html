@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'home.css'%}">
+</head>
+<body>
+    
+
+    
+    <div class="mainsignup">
+    
+        
+        <button id="loginbuttom"> <a href="{% url 'index' %}">Home</a></button>
+        <div class="signup">
+            
+            <div id="signupheadding"><h1 >Login</h1></div>
+
+            {% for message in messages %}
+                <div  id="dataa" class="mas" class="alert alert-{{message.tage}} alert-dismissible fade show" role="alert">
+                    <p class="messages">{{message}}</p>
+                    <button onclick="deletedata()" id="close1" type="button" class="close" data-dismiss="alert" aria-level="close">
+                        <span aria-hidden="true"> &times;</span> 
+                    </button>   
+                </div>
+            {% endfor %}
+
+            <form action="" method="post"  class="form">
+            {% csrf_token %}
+
+
+                <div class="fileld" id="fileld1">
+                    <input required="" type="text" id="nameuser" name="username"  class="input">
+                    <label for="username">UserName <span class="star">*</span></label>
+                </div>
+
+                <div class="fileld">
+                    <input required="" type="password" id="pass" name="pass1" class="input">
+                    <label for="password">Password <span class="star">*</span></label>
+                </div>
+
+            
+                <div id="action">
+                    <label><input type="checkbox">Remember me</label>
+                    <!-- <a id="forget" href="">Forget password ?</a> -->
+                </div>
+
+                <button id="loginbuttom">Login</button><br>
+                <div id="signup">Don't have an Account ? <a href="{% url 'signup' %}">Sign up</a></div> <br>
+                
+            </form>    
+                
+
+        </div>
+    
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

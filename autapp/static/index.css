@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: black;
+}
+
+body{
+    background: linear-gradient(150deg, #d7dff5, #85a39c);
+    
+}
+
+.contaner{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contaner2{
+    margin-top: -50px;
+    padding: 20px;
+    height: 38vh; 
+    width: 45vw; 
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Welcome h1{
+    padding-bottom: 38px;
+    font-family: futura;
+    margin-left: 50px;
+    text-decoration: underline white;
+}
+.info{
+    padding-bottom: 20px;
+    margin-top: 12px;
+}
+
+.info button{
+    margin-left: 80px;
+}
+
+button{
+    height: 4vh;
+    width: 8vw;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    margin-left: 35px;
+    position:fixed;
+}
+
+button a{
+    text-decoration: none;
+    color:green;
+    font-weight: bold;
+    font-size:15px;
+}
+
+#element span{
+    color :green
+
+}
+
+
+
+.messages{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+
+}
+#hello{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+    word-spacing: 5px;
+}
+
+#mass1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+}
+
+#logoutbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    
+}
+#name{
+    color:green;
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+#close1{
+    height: 22px;
+    width: 22px;
+    border-radius: 5px;
+    background-color:red;
+    margin-left: 5px;
+}
+
+.mas{
+    display: flex;
+    justify-content: center;
+    font-size: smaller;
+    color:red;
+}

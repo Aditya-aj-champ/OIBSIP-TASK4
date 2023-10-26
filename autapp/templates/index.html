@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+<body >
+    
+    <div class="contaner">
+        <div class="contaner2">
+            <div class="Welcome">
+                <div>
+                    <h1><span id="element"></span></h1>
+                </div>
+                {% for message in messages %}
+                <div id="dataa" class="mas"  class="alert alert-{{message.tage}} alert-dismissible fade show" role="alert">
+                    <div><p class="messages">{{message}}</p></div>
+                    <div><button onclick="deletedata()" id="close1" type="button"onclick="deletedata()" class="close" data-dismiss="alert" aria-level="close">
+                    <span aria-hidden="true"> &times;</span> 
+                </button> 
+            </div>   
+                </div>
+                {% endfor %}   
+                
+                
+                
+                {% if user.is_authenticated %}
+                
+                    <h3 id="hello">Hello <p id="name"> {{fname}}!</p> </h3>
+                    <h4 id="mass1"> <span id="mass"></span></h4>
+                <div id="logoutbutton">
+                    <button id="loginbuttom" type="submit"><a href="/signout" style="color: red;"> Signout</a></button>
+                </div>
+                {% else %}
+                <h3 class="info">If you're a new user on this site then click on  SignUp 
+                    <button id="loginbuttom"> <a href="{% url 'signin' %}">SignIn</a></button></h3>
+                
+                <h3 >If you're a registered user on this site then click on  SignIn  
+                    <button  id="loginbuttom"> <a href="{% url 'signup' %}">SignUp</a></button></h3>
+                
+                {%endif%}
+                <!-- <button> <a href="{% url 'signin' %}">login</a></button> -->
+            </div> 
+    </div>   
+    </div>s
+    <script src="{% static 'script.js' %}"></script>
+    
+</body>
+</html>
